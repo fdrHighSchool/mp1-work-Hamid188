@@ -41,15 +41,6 @@ public class UserName {
     }
 } 
 
-public static String generatePassword(int length) {
-String pssword = "";
-    
-int asciiValue1 = 65;
-char char1 = (char)(asciiValue1);
-System.out.println(char1);
 
-
-}
- }
 
 

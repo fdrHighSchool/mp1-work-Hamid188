@@ -6,32 +6,50 @@
  * @version (10/12/2022)
  */
 import java.util.Scanner;
+import java.util.Random;
 
 public class UserName {
   public static void main(String[] args) {
-    // create Scanner object
+    // create a Scanner object
     Scanner s = new Scanner(System.in);
-
-    // get String input from user
+    Random rand = new Random();
+    
+    int rand_int1 = rand.nextInt(10);
+    int rand_int2 = rand.nextInt(10);
+    int rand_int3 = rand.nextInt(10);
+    int rand_int4 = rand.nextInt(10);
+    
+    // Get A String Input From User
     System.out.print("Enter your first name: ");
     String firstName = s.nextLine();
     System.out.print("Enter your last name: ");
     String lastName = s.nextLine();
+    System.out.print("Enter a random number: ");
+    String favNum = s.nextLine();
+    
+    // Get A String Input From User
+    System.out.print("Are you a teacher or a student?");
+    String status = s.nextLine();
+    status = status.toUpperCase();
 
-    // test output
-    System.out.println("Hello " + getInitial(firstName) + "." + getInitial(lastName) + ".");
 
-    s.close();
-  } // end main method
+    if (status .equals("student")) {
+        System.out.println(firstName + lastName.substring(0, 1) + favNum + "@nycstudents.net");
+    }
+    if (status .equals("teacher")) {
+        System.out.println(firstName.substring(0, 1) + lastName + favNum + "@schools.nyc.gov");
+    }
+} 
 
-  /*
-   * Name: getInitial
-   * Purpose: send back the first character (inital) of a name
-   * Input: a name (String)
-   * Return: a single character (String)
-   */
-  public static String getInitial(String n) {
-    return n.substring(0, 1);
-  } // end initialize method
+public static String generatePassword(int length) {
+String pssword = "";
+    
+int asciiValue1 = 65;
+char char1 = (char)(asciiValue1);
+System.out.println(char1);
 
-} // end class
+
+}
+ }
+
+
